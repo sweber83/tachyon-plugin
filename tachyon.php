@@ -43,7 +43,7 @@ function tachyon_url( $image_url, $args = [], $scheme = null ) {
 
 	$image_url = trim( $image_url );
 
-	$image_file = basename( parse_url( $image_url, PHP_URL_PATH ) );
+	$image_file = basename( $image_url );
 	$image_url  = str_replace( $image_file, urlencode( $image_file ), $image_url );
 
 	if ( strpos( $image_url, $upload_baseurl ) !== 0 ) {
